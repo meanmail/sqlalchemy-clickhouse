@@ -149,7 +149,7 @@ class Connection(Database):
 
         super(Connection, self).__init__(db_name, db_url, username, password,
                                          readonly, verify_ssl_cert=verify,
-                                         timeout=timeout)
+                                         timeout=int(timeout))
         self.db_name = db_name
         self.db_url = db_url
         self.username = username
